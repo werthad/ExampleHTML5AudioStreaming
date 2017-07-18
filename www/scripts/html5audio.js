@@ -22,7 +22,7 @@ function pad2(number) {
 	return (number < 10 ? '0' : '') + number
 }
 
-var myaudioURL = 'http://92.61.114.195:9960;';
+var myaudioURL = 'http://92.61.114.195:9960/;';
 var myaudio = new Audio(myaudioURL);
 var isPlaying = false;
 var readyStateInterval = null;
