@@ -22,7 +22,7 @@ function pad2(number) {
 	return (number < 10 ? '0' : '') + number
 }
 
-var myaudioURL = 'http://stream.4zzzfm.org.au:789/;';
+var myaudioURL = 'http://92.61.114.195:9960;';
 var myaudio = new Audio(myaudioURL);
 var isPlaying = false;
 var readyStateInterval = null;
@@ -37,7 +37,7 @@ var html5audio = {
 			 if (myaudio.readyState <= 2) {
 				 playButton.style.display = 'none';
 				 activityIndicator.style.display = 'block';
-				 textPosition.innerHTML = 'loading...';
+				 textPosition.innerHTML = 'Pillanat...';
 			 }
 		},1000);
 		myaudio.addEventListener("timeupdate", function() {
@@ -77,7 +77,7 @@ var html5audio = {
 			 //	'Stream error',	// title
 			 //	'Retry,OK'		// buttonLabels
 			 // );
-			 if (window.confirm('Streaming failed. Possibly due to a network error. Retry?')) {
+			 if (window.confirm('Hiba történt, bocsi :/  Újra próbáljuk ?')) {
 			 	onConfirmRetry();
 			 }
 		}, false);
