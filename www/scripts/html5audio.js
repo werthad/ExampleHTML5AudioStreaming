@@ -22,9 +22,9 @@ function pad2(number) {
 	return (number < 10 ? '0' : '') + number
 }
 
-var myaudioURL = 'http://92.61.114.195:9960/';
+var myaudioURL = 'http://92.61.114.195:9960/;';
 var myaudio = new Audio(myaudioURL);
-var isPlaying = false;
+var isPlaying = true;
 var readyStateInterval = null;
 
 var html5audio = {
@@ -37,7 +37,7 @@ var html5audio = {
 			 if (myaudio.readyState <= 2) {
 				 playButton.style.display = 'none';
 				 activityIndicator.style.display = 'block';
-				 textPosition.innerHTML = 'Pillanat...';
+				 textPosition.innerHTML = 'pillanat...';
 			 }
 		},1000);
 		myaudio.addEventListener("timeupdate", function() {
@@ -70,14 +70,14 @@ var html5audio = {
 		myaudio.addEventListener("ended", function() {
 			 //console.log('myaudio ENDED');
 			 html5audio.stop();
-			 // navigator.notification.alert('Streaming failed. Possibly due to a network error.', null, 'Stream error', 'OK');
+			 navigator.notification.alert('Streaming failed. Possibly due to a network error.', null, 'Stream error', 'OK');
 			 // navigator.notification.confirm(
-			 //	'Streaming failed. Possibly due to a network error.', // message
+			 //	'A stream lejátszása nem sikerûlt. Újra próbálod ?', // message
 			 //	onConfirmRetry,	// callback to invoke with index of button pressed
-			 //	'Stream error',	// title
-			 //	'Retry,OK'		// buttonLabels
+			 //	'Stream hiba',	// title
+			 //	'Újra,OKÉ'		// buttonLabels
 			 // );
-			 if (window.confirm('Hiba tÃ¶rtÃ©nt, bocsi :/  Ãšjra prÃ³bÃ¡ljuk ?')) {
+			 if (window.confirm('A stream lejátszása nem sikerûlt. Újra próbálod ?')) {
 			 	onConfirmRetry();
 			 }
 		}, false);
