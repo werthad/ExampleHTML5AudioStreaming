@@ -13,7 +13,16 @@
     <author href="baptistaradio.hu" email="werthad@gmail.com">
         Sebestyén Krisztián Tamás
     </author>
-    
+    <access origin="*" />
+    <access launch-external="true" origin="mailto:*" />
+    <access launch-external="true" origin="http://:*" />
+    <access launch-external="true" origin="https://:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="http://*" />
+    <allow-intent href="https://*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms://*" />
+        
     <access origin="www.42netmedia.com" subdomains="true" />
     <access origin="baptistaradio" subdomains="true" />
 
